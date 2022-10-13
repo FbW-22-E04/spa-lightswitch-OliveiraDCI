@@ -1,7 +1,11 @@
+import { useState } from "react";
+import Room from "./components/Room";
+
 export default function App() {
-    return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
-    );
-};
+  const [theme, setTheme] = useState(false);
+  return (
+    <div>
+      <Room state={theme} handleClick={() => setTheme(!theme)} />
+    </div>
+  );
+}
